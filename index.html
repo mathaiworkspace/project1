@@ -31,9 +31,9 @@
                 <div class="person col-8">
                 </div>
             </div>
-            <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <div class="d-grid gap-2 d-md-block mx-auto btn-groups">
                 <button class="btn btn-primary reset" type="button">Reset</button>
-                <button class="btn btn-primary result" type="button">Result</button>
+                <button class="btn btn-success result" type="button">Result</button>
             </div>
         </div>
         <div class="container">
@@ -213,18 +213,26 @@
                 })
             });
             array2 = _.sortBy(array2, 'count').reverse();
+            if(array2[0].count=="0"){
+                array2 = _.sortBy(array2, 'count').reverse();
+            }
+            if(array[0].count=="0"){
+                array = _.sortBy(array, 'count').reverse();
+            }
             _.each(array, function (element, index) {
 
-                var data = '<div class=result-panel"><label for="file">' + element.name +
+                var data = '<div class="result-panel"><label for="file">' + element.name +
                     '</label><progress id="file" value="' + element.count +
-                    '" max="100"> 32% </progress>  ' + element.count + '</div>'
+                    '" max="100"> 32% </progress><div class="person-count"> <span> ' + element
+                    .count + '</span></div></div>'
                 $(".kaikar").append(data)
             });
             _.each(array2, function (element, index) {
 
-                var data = '<div class=result-panel"><label for="file">' + element.name +
+                var data = '<div class="result-panel"><label for="file">' + element.name +
                     '</label><progress id="file" value="' + element.count +
-                    '" max="100"> 32% </progress>  ' + element.count + '</div>'
+                    '" max="100"> 32% </progress><div class="person-count"> <span>' + element
+                    .count + '</span></div></div>'
                 $(".parish-council").append(data)
                 // 
             });
@@ -232,6 +240,10 @@
     });
 </script>
 <style>
+    .person-count {
+        margin-left: 10px;
+    }
+
     .result-panel {
         height: 40px;
         padding: 5px;
@@ -321,6 +333,32 @@
         .plus {
             width: 25px;
         }
+
+        .result-row label {
+            width: 100%;
+        }
+
+        progress {
+            width: 100%;
+        }
+
+        .person-count {
+            text-align: center;
+        }
+    }
+
+    body {
+        margin-bottom: 20px;
+    }
+
+    .justify-content-center {
+        margin-bottom: 20px;
+    }
+    .justify-content-center button{
+        width: 100%;
+    }
+    .btn-groups{
+        text-align: center;
     }
 </style>
 
