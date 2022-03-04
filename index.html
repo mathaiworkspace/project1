@@ -27,22 +27,37 @@
                 <h3>Election Result</h3>
             </div>
             <div class="first-section row">
-                <div class="person2 col-sm-3">
+                <div class="person2 col justify-content-center">
                 </div>
-                <div class="person col-sm-8">
+                <div class="d-grid gap-2 d-md-block mx-auto btn-groups">
+                    <button class="btn btn-primary reset" type="button">Reset</button>
+                    <button class="btn btn-success result" type="button">Result</button>
                 </div>
-            </div>
-            <div class="d-grid gap-2 d-md-block mx-auto btn-groups">
-                <button class="btn btn-primary reset" type="button">Reset</button>
-                <button class="btn btn-success result" type="button">Result</button>
+                <div class="container results-container">
+                    <div class="results-group row">
+                        <div class="kaikar result-row  col-12"></div>
+
+                    </div>
+                </div>
+                <div class="person col">
+                </div>
+                <div class="d-grid gap-2 d-md-block mx-auto btn-groups">
+                    <button class="btn btn-primary reset" type="button">Reset</button>
+                    <button class="btn btn-success result1" type="button">Result</button>
+                </div>
+                <div class="container results-container">
+                    <div class="results-group row">
+                        <div class="parish-council  result-row  col-12"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="container">
+        <!-- <div class="container">
             <div class="results-group row">
                 <div class="kaikar result-row  col-6"></div>
                 <div class="parish-council  result-row  col-6"></div>
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 <script>
@@ -151,7 +166,8 @@
         var count = sessionStorage.getItem(element.index + '. ' + element.name) || 0
         var one = '<div class="single-element"><div id="' + element.index + '" class="name">' + element.index +
             '. ' + element.name +
-            '</div><div class="number"><span class="minus">-</span><input disabled type="text" value="' + count +
+            '</div><div class="number"><span class="minus">-</span><input disabled type="text" value="' +
+            count +
             '"/><span class="plus">+</span></div><br></div>'
         $(".person").append(one)
 
@@ -161,7 +177,8 @@
         var count = sessionStorage.getItem(element.index + '. ' + element.name) || 0
         var one = '<div class="single-element"><div id="' + element.index + '" class="name">' + element.index +
             '. ' + element.name +
-            '</div><div class="number"><span class="minus">-</span><input disabled type="text" value="' + count +
+            '</div><div class="number"><span class="minus">-</span><input disabled type="text" value="' +
+            count +
             '"/><span class="plus">+</span></div><br></div>'
         $(".person2").append(one)
 
@@ -191,43 +208,23 @@
             sessionStorage.clear()
             location.reload();
         });
-        $('.result').click(function () {
-            var array = []
-            $(".kaikar").html("")
+        $('.result1').click(function () {
             $(".parish-council").html("")
-            $('.person2 .single-element').each(function () {
-                var name = $(this).find(".name").text()
-                var count = $(this).find("input").val()
-                array.push({
-                    name: name,
-                    count: parseInt(count)
-                })
-            });
-            array = _.sortBy(array, 'count').reverse();
             var array2 = []
             $('.person .single-element').each(function () {
                 var name = $(this).find(".name").text()
                 var count = $(this).find("input").val()
-                array2.push({
-                    name: name,
-                    count: parseInt(count)
-                })
+                if (count > 0) {
+                    array2.push({
+                        name: name,
+                        count: parseInt(count)
+                    })
+                }
             });
             array2 = _.sortBy(array2, 'count').reverse();
             if (array2[0].count == "0") {
                 array2 = _.sortBy(array2, 'count').reverse();
             }
-            if (array[0].count == "0") {
-                array = _.sortBy(array, 'count').reverse();
-            }
-            _.each(array, function (element, index) {
-
-                var data = '<div class="result-panel"><label for="file">' + element.name +
-                    '</label><progress id="file" value="' + element.count +
-                    '" max="400"></progress><div class="person-count"> <span> ' + element
-                    .count + '</span></div></div>'
-                $(".kaikar").append(data)
-            });
             _.each(array2, function (element, index) {
 
                 var data = '<div class="result-panel"><label for="file">' + element.name +
@@ -236,6 +233,32 @@
                     .count + '</span></div></div>'
                 $(".parish-council").append(data)
                 // 
+            });
+        });
+        $('.result').click(function () {
+            var array = []
+            $(".kaikar").html("")
+            $('.person2 .single-element').each(function () {
+                var name = $(this).find(".name").text()
+                var count = $(this).find("input").val()
+                if (count > 0) {
+                    array.push({
+                        name: name,
+                        count: parseInt(count)
+                    })
+                }
+            });
+            array = _.sortBy(array, 'count').reverse();
+
+            if (array[0].count == "0") {
+                array = _.sortBy(array, 'count').reverse();
+            }
+            _.each(array, function (element, index) {
+                var data = '<div class="result-panel"><label for="file">' + element.name +
+                    '</label><progress id="file" value="' + element.count +
+                    '" max="400"></progress><div class="person-count"> <span> ' + element
+                    .count + '</span></div></div>'
+                $(".kaikar").append(data)
             });
         });
     });
@@ -247,7 +270,9 @@
 
     .result-panel {
         height: 40px;
-        padding: 5px;
+        padding: 5px 15px;
+        margin: 2px 0;
+        border-radius: 5px;
     }
 
     .title {
@@ -285,6 +310,15 @@
         width: 40%;
     }
 
+    .parish-council .result-panel:nth-child(-n+10) {
+        background-color: #cde7cd;
+        font-weight: bold;
+    }
+    .kaikar .result-panel:nth-child(-n+2) {
+        background-color: #cde7cd;
+        font-weight: bold;
+    }
+
     progress {
         width: 45%;
     }
@@ -302,17 +336,19 @@
 
     .person {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
+
+    .person2 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         gap: 10px;
     }
 
     .result-panel {
         display: flex;
         align-items: center;
-    }
-
-    .person2 {
-        border-right: 1px solid black;
     }
 
     .first-section.row {
@@ -325,10 +361,15 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 0px;
         }
+        .person2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0px;
+        }
 
         .number input {
             height: 34px;
-            width: 50px;
+            width: 65px;
             text-align: center;
             font-size: 16px;
             vertical-align: middle;
@@ -341,7 +382,7 @@
 
         .minus,
         .plus {
-            width: 25px;
+            width: 45px;
         }
 
         .result-row label {
@@ -364,6 +405,18 @@
 
     body {
         margin-bottom: 20px;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently*/
     }
 
     .justify-content-center {
@@ -376,6 +429,11 @@
 
     .btn-groups {
         text-align: center;
+    }
+
+    .btn-groups,
+    .results-container {
+        margin-bottom: 2%;
     }
 </style>
 
