@@ -296,6 +296,32 @@
     .result-panel {
         display: flex;
     }
+
+    @media only screen and (max-width: 600px) {
+        .person {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0px;
+        }
+
+        .number input {
+            height: 34px;
+            width: 50px;
+            text-align: center;
+            font-size: 16px;
+            vertical-align: middle;
+        }
+
+        .name {
+            font-weight: bold;
+            height: 52px;
+        }
+
+        .minus,
+        .plus {
+            width: 25px;
+        }
+    }
 </style>
 
 </html>
