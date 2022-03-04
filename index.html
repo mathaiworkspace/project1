@@ -199,7 +199,7 @@
                 var count = $(this).find("input").val()
                 array.push({
                     name: name,
-                    count: count
+                    count: parseInt(count)
                 })
             });
             array = _.sortBy(array, 'count').reverse();
@@ -209,7 +209,7 @@
                 var count = $(this).find("input").val()
                 array2.push({
                     name: name,
-                    count: count
+                    count: parseInt(count)
                 })
             });
             array2 = _.sortBy(array2, 'count').reverse();
