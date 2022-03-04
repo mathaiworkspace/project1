@@ -150,7 +150,7 @@
         var count = sessionStorage.getItem(element.index + '. ' + element.name) || 0
         var one = '<div class="single-element"><div id="' + element.index + '" class="name">' + element.index +
             '. ' + element.name +
-            '</div><div class="number"><span class="minus">-</span><input type="text" value="' + count +
+            '</div><div class="number"><span class="minus">-</span><input disabled type="text" value="' + count +
             '"/><span class="plus">+</span></div><br></div>'
         $(".person").append(one)
 
@@ -160,7 +160,7 @@
         var count = sessionStorage.getItem(element.index + '. ' + element.name) || 0
         var one = '<div class="single-element"><div id="' + element.index + '" class="name">' + element.index +
             '. ' + element.name +
-            '</div><div class="number"><span class="minus">-</span><input type="text" value="' + count +
+            '</div><div class="number"><span class="minus">-</span><input disabled type="text" value="' + count +
             '"/><span class="plus">+</span></div><br></div>'
         $(".person2").append(one)
 
