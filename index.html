@@ -213,10 +213,10 @@
                 })
             });
             array2 = _.sortBy(array2, 'count').reverse();
-            if(array2[0].count=="0"){
+            if (array2[0].count == "0") {
                 array2 = _.sortBy(array2, 'count').reverse();
             }
-            if(array[0].count=="0"){
+            if (array[0].count == "0") {
                 array = _.sortBy(array, 'count').reverse();
             }
             _.each(array, function (element, index) {
@@ -345,6 +345,11 @@
         .person-count {
             text-align: center;
         }
+
+        .result-panel {
+            height: 55px;
+            font-size: 12px;
+        }
     }
 
     body {
@@ -354,10 +359,12 @@
     .justify-content-center {
         margin-bottom: 20px;
     }
-    .justify-content-center button{
+
+    .justify-content-center button {
         width: 100%;
     }
-    .btn-groups{
+
+    .btn-groups {
         text-align: center;
     }
 </style>
