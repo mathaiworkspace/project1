@@ -27,27 +27,31 @@
                 <h3>Election Result</h3>
             </div>
             <div class="first-section row">
-                <div class="person2 col justify-content-center">
-                </div>
-                <div class="d-grid gap-2 d-md-block mx-auto btn-groups">
-                    <button class="btn btn-primary reset" type="button">Reset</button>
-                    <button class="btn btn-success result" type="button">Result</button>
-                </div>
-                <div class="container results-container">
-                    <div class="results-group row">
-                        <div class="kaikar result-row  col-12"></div>
+                <div class="group-results">
+                    <div class="person2 col justify-content-center">
+                    </div>
+                    <div class="d-grid gap-2 d-md-block mx-auto btn-groups">
+                        <!-- <button class="btn btn-primary reset" type="button">Reset</button> -->
+                        <button class="btn btn-success result" type="button">Result</button>
+                    </div>
+                    <div class="container results-container">
+                        <div class="results-group row">
+                            <div class="kaikar result-row  col-12"></div>
 
+                        </div>
                     </div>
                 </div>
-                <div class="person col">
-                </div>
-                <div class="d-grid gap-2 d-md-block mx-auto btn-groups">
-                    <button class="btn btn-primary reset" type="button">Reset</button>
-                    <button class="btn btn-success result1" type="button">Result</button>
-                </div>
-                <div class="container results-container">
-                    <div class="results-group row">
-                        <div class="parish-council  result-row  col-12"></div>
+                <div class="group-results">
+                    <div class="person col">
+                    </div>
+                    <div class="d-grid gap-2 d-md-block mx-auto btn-groups">
+                        <!-- <button class="btn btn-primary reset" type="button">Reset</button> -->
+                        <button class="btn btn-success result1" type="button">Result</button>
+                    </div>
+                    <div class="container results-container">
+                        <div class="results-group row">
+                            <div class="parish-council  result-row  col-12"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,6 +63,8 @@
             </div>
         </div> -->
     </div>
+
+    <!-- <button class="btn btn-primary reset" type="button">Reset</button> -->
 </body>
 <script>
     var data = {
@@ -267,6 +273,9 @@
     .person-count {
         margin-left: 10px;
     }
+    /* .group-results{
+        height: 100vh;
+    } */
 
     .result-panel {
         height: 40px;
@@ -314,13 +323,25 @@
         background-color: #cde7cd;
         font-weight: bold;
     }
+
+    .parish-council .result-panel {
+        background-color: #e1b6c2;
+        font-weight: bold;
+    }
+
     .kaikar .result-panel:nth-child(-n+2) {
         background-color: #cde7cd;
         font-weight: bold;
     }
 
+    .kaikar .result-panel {
+        background-color: #e1b6c2;
+        font-weight: bold;
+    }
+
     progress {
         width: 45%;
+        height: 25px;
     }
 
     input {
@@ -361,6 +382,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 0px;
         }
+
         .person2 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
