@@ -21,7 +21,7 @@
 <body>
     <div>
 
-        <div class="container">
+        <div class="container body-container">
             <div class="title">
                 <h2>Mar Addai Sleeha Church, Paravattani</h2>
                 <h3>Election Result</h3>
@@ -78,31 +78,43 @@
 
     </div>
 
-
+    <footer class="bg-light justify-content-end text-lg-start" style="opacity: .2;float: right;">
+        <!-- Copyright -->
+        <div class="text-center p-3">
+            © imp_workspace
+        </div>
+        <!-- Copyright -->
+    </footer>
 </body>
 <script>
     var data = {
         "kaikar": [{
-            "name": "A.C. Chummar",
-            "index": "1",
-            "count": "0"
-        }, {
-            "name": "C.K. Johnson",
-            "index": "2",
-            "count": "0"
-        }, {
-            "name": "Paul Mathews",
-            "index": "3",
-            "count": "0"
-        }, {
-            "name": "Thimothy Mampily",
-            "index": "4",
-            "count": "0"
-        }, {
-            "name": "Tony Pananchery",
-            "index": "5",
-            "count": "0"
-        }],
+                "name": "A.C. Chummar",
+                "index": "1",
+                "count": "0"
+            }, {
+                "name": "C.K. Johnson",
+                "index": "2",
+                "count": "0"
+            }, {
+                "name": "Paul Mathews",
+                "index": "3",
+                "count": "0"
+            }, {
+                "name": "Thimothy Mampily",
+                "index": "4",
+                "count": "0"
+            }, {
+                "name": "Tony Pananchery",
+                "index": "5",
+                "count": "0"
+            },
+            {
+                "name": "Invalid Votes",
+                "index": "6",
+                "count": "0"
+            }
+        ],
         "Parish": [{
             "name": "Abi Mathew",
             "index": "1",
@@ -178,6 +190,10 @@
         }, {
             "name": "O.L. Wilson",
             "index": "19",
+            "count": "0"
+        }, {
+            "name": "Invalid Votes",
+            "index": "20",
             "count": "0"
         }]
     }
@@ -257,7 +273,7 @@
             _.each(array2, function (element, index) {
                 var tot = parseInt($('.total-count').val()) || 100
                 var percentage = toFixed(((parseInt(element.count) / tot) *
-                    100),2)
+                    100), 2)
 
                 function toFixed(num, fixed) {
                     fixed = fixed || 0;
@@ -294,7 +310,7 @@
             _.each(array, function (element, index) {
                 var tot = parseInt($('.total-count').val()) || 100
                 var percentage = toFixed(((parseInt(element.count) / tot) *
-                    100),2)
+                    100), 2)
 
                 function toFixed(num, fixed) {
                     fixed = fixed || 0;
@@ -313,6 +329,10 @@
     });
 </script>
 <style>
+    .body-container{
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
     button.btn.btn-outline-danger.reset {
         margin-top: 70px;
     }
@@ -321,9 +341,10 @@
         margin-left: 10px;
     }
 
-    /* .group-results{
-        height: 100vh;
-    } */
+    .group-results{
+        /*height: 100vh;*/
+        margin-bottom: 30px;
+    } 
 
     .result-panel {
         height: 40px;
