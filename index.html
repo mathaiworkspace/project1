@@ -256,8 +256,14 @@
             array2 = _.sortBy(array2, 'count').reverse();
             _.each(array2, function (element, index) {
                 var tot = parseInt($('.total-count').val()) || 100
-                var percentage = (parseInt(element.count) / tot) *
-                    100
+                var percentage = toFixed(((parseInt(element.count) / tot) *
+                    100),2)
+
+                function toFixed(num, fixed) {
+                    fixed = fixed || 0;
+                    fixed = Math.pow(10, fixed);
+                    return Math.floor(num * fixed) / fixed;
+                }
                 var data = '<div class="result-panel"><label for="file">' + element.name +
                     '</label><progress id="file" value="' + element.count +
                     '" max="' + tot + '"></progress><div class="person-count"> <span>' + element
@@ -287,8 +293,14 @@
 
             _.each(array, function (element, index) {
                 var tot = parseInt($('.total-count').val()) || 100
-                var percentage = (parseInt(element.count) / tot) *
-                    100
+                var percentage = toFixed(((parseInt(element.count) / tot) *
+                    100),2)
+
+                function toFixed(num, fixed) {
+                    fixed = fixed || 0;
+                    fixed = Math.pow(10, fixed);
+                    return Math.floor(num * fixed) / fixed;
+                }
                 var data = '<div class="result-panel"><label for="file">' + element.name +
                     '</label><progress id="file" value="' + element.count +
                     '" max="' + tot + '"></progress><div class="person-count"> <span> ' +
