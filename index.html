@@ -71,7 +71,7 @@
     <script src="script.js"></script>
 
     <script>
-         $('.whatsapp-send').click(function () {
+        $('.whatsapp-send').click(function () {
             if ($('.total-count').val() == "") {
                 alert("Enter Total Polled Votes");
                 return;
@@ -81,12 +81,11 @@
             let totalVotes = $('.total-count').val();
 
             function generateTable(resultClass, title) {
-                let table = `*${title}*\n| Name | Votes | Percentage |\n|------|-------|------------|\n`;
+                let table = `*${title}*\n\n`;
                 $(resultClass + ' .result-panel').each(function () {
                     let name = $(this).find('label').text().trim();
                     let votes = $(this).find('progress').attr('value');
-                    let percentage = $(this).find('.person-count span').text().trim();
-                    table += `| ${name} | ${votes} | ${percentage} |\n`;
+                    table += `${name} - ${votes} votes\n`;
                 });
                 return table + "\n";
             }
