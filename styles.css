@@ -1,3 +1,4 @@
+/* styles.css */
 .body-container {
     margin-bottom: 20px;
     margin-top: 40px;
@@ -56,21 +57,136 @@ span {
     width: 40%;
 }
 
-.progress {
+.parish-council .result-panel:nth-child(-n+10) {
+    background-color: #cde7cd;
+    font-weight: bold;
+}
+
+.parish-council .result-panel {
+    background-color: #e1b6c2;
+    font-weight: bold;
+}
+
+.kaikar .result-panel:nth-child(-n+2) {
+    background-color: #cde7cd;
+    font-weight: bold;
+}
+
+.kaikar .result-panel {
+    background-color: #e1b6c2;
+    font-weight: bold;
+}
+
+progress {
     width: 45%;
     height: 25px;
 }
 
-/* Responsive styles */
+.first-section input {
+    height: 34px;
+    width: 100px;
+    text-align: center;
+    font-size: 26px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.person {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.person2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.result-panel {
+    display: flex;
+    align-items: center;
+}
+
+.first-section.row {
+    justify-content: space-between;
+}
+
 @media only screen and (max-width: 600px) {
-    .person,
-    .person2 {
+    .person {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0px;
+    }
+
+    .person2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+    }
+
+    .number input {
+        height: 34px;
+        width: 65px;
+        text-align: center;
+        font-size: 16px;
+        vertical-align: middle;
+    }
+
+    .name {
+        font-weight: bold;
+        height: 52px;
+    }
+
+    .minus,
+    .plus {
+        width: 45px;
+    }
+
+    .result-row label {
+        width: 100%;
+    }
+
+    progress {
+        width: 100%;
+    }
+
+    .person-count {
+        text-align: center;
     }
 
     .result-panel {
         height: 55px;
         font-size: 12px;
     }
+}
+
+body {
+    margin-bottom: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.justify-content-center {
+    margin-bottom: 20px;
+}
+
+.justify-content-center button {
+    width: 100%;
+}
+
+.btn-groups {
+    text-align: center;
+    width: 20%;
+}
+
+.btn-groups,
+.results-container {
+    margin-bottom: 2%;
 }
