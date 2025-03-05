@@ -23,7 +23,7 @@ function loadCandidates(dataKey, containerClass) {
 
 var data = {
     "kaikar": [{
-        "name": "-",
+        "name": "",
         "index": "1",
         "count": "0"
     }, {
@@ -31,7 +31,7 @@ var data = {
         "index": "2",
         "count": "0"
     }, {
-        "name": "-",
+        "name": "",
         "index": "3",
         "count": "0"
     }, {
@@ -48,7 +48,7 @@ var data = {
         "index": "6",
         "count": "0"
     },
-               {
+    {
         "name": "Invalid Votes",
         "index": "7",
         "count": "0"
@@ -63,7 +63,7 @@ var data = {
         "index": "2",
         "count": "0"
     }, {
-        "name": "-",
+        "name": "",
         "index": "3",
         "count": "0"
     }, {
@@ -83,7 +83,7 @@ var data = {
         "index": "7",
         "count": "0"
     }, {
-        "name": "-",
+        "name": "",
         "index": "8",
         "count": "0"
     }, {
@@ -107,32 +107,48 @@ var data = {
         "index": "13",
         "count": "0"
     }, {
-        "name": "T.C. Paul",
+        "name": "Joju Varghese",
         "index": "14",
         "count": "0"
     }, {
-        "name": "E.P. Sabu",
+        "name": "",
         "index": "15",
         "count": "0"
     }, {
-        "name": "Thimothy Mampily",
+        "name": "",
         "index": "16",
         "count": "0"
     }, {
-        "name": "Tony Parakal",
+        "name": "Roby Francis",
         "index": "17",
         "count": "0"
     }, {
-        "name": "N.R. Varghese",
+        "name": "Seena Shaji",
         "index": "18",
         "count": "0"
     }, {
-        "name": "O.L. Wilson",
+        "name": "Shincy Niyo",
         "index": "19",
         "count": "0"
     }, {
-        "name": "Invalid Votes",
+        "name": "Sijo Varghese",
         "index": "20",
+        "count": "0"
+    }, {
+        "name": "Tony Parakal",
+        "index": "21",
+        "count": "0"
+    }, {
+        "name": "N.R. Varghese",
+        "index": "22",
+        "count": "0"
+    }, {
+        "name": "Viju Simon",
+        "index": "23",
+        "count": "0"
+    }, {
+        "name": "Wilson O.L.",
+        "index": "24",
         "count": "0"
     }]
 }
@@ -199,31 +215,6 @@ $(document).ready(function () {
         });
         array = _.sortBy(array, 'count').reverse();
         displayResults(".kaikar", array);
-    });
-    $('.whatsapp-send').click(function () {
-        if ($('.total-count').val() == "") {
-            alert("Enter Total Polled Votes");
-            return;
-        }
-
-        let message = "Election Results:\n";
-        let totalVotes = $('.total-count').val();
-        let results = [];
-
-        $('.result-panel').each(function () {
-            let name = $(this).find('label').text();
-            let votes = $(this).find('progress').val();
-            let percentage = $(this).find('.person-count span').text();
-            results.push(`${name}: ${votes} votes (${percentage})`);
-        });
-
-        message += results.join("\n");
-        message += `\nTotal Votes: ${totalVotes}`;
-
-        let phoneNumber = "1234567890"; // Replace with recipient/group number
-        let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-        window.open(whatsappURL, '_blank');
     });
 });
 
