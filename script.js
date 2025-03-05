@@ -220,7 +220,6 @@ $(document).ready(function () {
 
         window.open(whatsappURL, '_blank');
     });
-
 });
 
 function displayResults(container, array) {
