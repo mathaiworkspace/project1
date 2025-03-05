@@ -1,0 +1,76 @@
+.body-container {
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+button.btn.btn-outline-danger.reset {
+    margin-top: 70px;
+}
+
+.person-count {
+    margin-left: 10px;
+}
+
+.group-results {
+    margin-bottom: 30px;
+}
+
+.result-panel {
+    height: 40px;
+    padding: 5px 15px;
+    margin: 2px 0;
+    border-radius: 5px;
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+span {
+    cursor: pointer;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.minus,
+.plus {
+    width: 35px;
+    height: 35px;
+    background: #f2f2f2;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.result-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-row label {
+    width: 40%;
+}
+
+.progress {
+    width: 45%;
+    height: 25px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .person,
+    .person2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+    }
+
+    .result-panel {
+        height: 55px;
+        font-size: 12px;
+    }
+}
