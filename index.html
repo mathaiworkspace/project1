@@ -77,19 +77,23 @@
                 return;
             }
 
-            let message = "Election Results:\n";
+            let message = "Election Results:\n\n";
             let totalVotes = $('.total-count').val();
-            let results = [];
 
-            $('.result-panel').each(function () {
-                let name = $(this).find('label').text();
-                let votes = $(this).find('progress').val();
-                let percentage = $(this).find('.person-count span').text();
-                results.push(`${name}: ${votes} votes (${percentage})`);
-            });
+            function generateTable(resultClass, title) {
+                let table = `${title}:\n| Name | Votes | Percentage |\n|------|-------|------------|\n`;
+                $(resultClass + ' .result-panel').each(function () {
+                    let name = $(this).find('label').text();
+                    let votes = $(this).find('progress').val();
+                    let percentage = $(this).find('.person-count span').text();
+                    table += `| ${name} | ${votes} | ${percentage} |\n`;
+                });
+                return table + "\n";
+            }
 
-            message += results.join("\n");
-            message += `\nTotal Votes: ${totalVotes}`;
+            message += generateTable('.kaikar', "Kaikar Results");
+            message += generateTable('.parish-council', "Parish Council Results");
+            message += `Total Votes: ${totalVotes}`;
 
             let phoneNumber = "9746615731"; // Replace with recipient/group number
             let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
