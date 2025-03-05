@@ -23,29 +23,34 @@ function loadCandidates(dataKey, containerClass) {
 
 var data = {
     "kaikar": [{
-        "name": "A.C. Chummar",
+        "name": "-",
         "index": "1",
         "count": "0"
     }, {
-        "name": "C.K. Johnson",
+        "name": "A.C. Chummar",
         "index": "2",
         "count": "0"
     }, {
-        "name": "Paul Mathews",
+        "name": "-",
         "index": "3",
         "count": "0"
     }, {
-        "name": "Thimothy Mampily",
+        "name": "Joju Varghese",
         "index": "4",
         "count": "0"
     }, {
-        "name": "Tony Pananchery",
+        "name": "Thimothy Mampily",
         "index": "5",
         "count": "0"
     },
     {
-        "name": "Invalid Votes",
+        "name": "Wilson OL",
         "index": "6",
+        "count": "0"
+    },
+               {
+        "name": "Invalid Votes",
+        "index": "7",
         "count": "0"
     }
     ],
@@ -54,51 +59,51 @@ var data = {
         "index": "1",
         "count": "0"
     }, {
-        "name": "Arooj Mohan",
+        "name": "Abi Ponmaniserry",
         "index": "2",
         "count": "0"
     }, {
-        "name": "A.R. Babu",
+        "name": "-",
         "index": "3",
         "count": "0"
     }, {
-        "name": "Biju Benjamin",
+        "name": "Akhil Francis",
         "index": "4",
         "count": "0"
     }, {
-        "name": "A.C. Chummar",
+        "name": "Anson George",
         "index": "5",
         "count": "0"
     }, {
-        "name": "Davis Chandy",
+        "name": "",
         "index": "6",
         "count": "0"
     }, {
-        "name": "C.V. Dinha",
+        "name": "Arooj Mohan",
         "index": "7",
         "count": "0"
     }, {
-        "name": "Dolphy Paul",
+        "name": "-",
         "index": "8",
         "count": "0"
     }, {
-        "name": "O.T. Francis",
+        "name": "Biju Benjamin",
         "index": "9",
         "count": "0"
     }, {
-        "name": "Gleeto Thimothy",
+        "name": "Dolphy Paul",
         "index": "10",
         "count": "0"
     }, {
-        "name": "Jijo M.J.",
+        "name": "Gleeto Thimothy",
         "index": "11",
         "count": "0"
     }, {
-        "name": "C.K. Johnson",
+        "name": "Jijo M.J.",
         "index": "12",
         "count": "0"
     }, {
-        "name": "Laly Rapheal",
+        "name": "",
         "index": "13",
         "count": "0"
     }, {
