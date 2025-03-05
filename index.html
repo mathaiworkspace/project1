@@ -11,44 +11,48 @@
 </head>
 
 <body>
-    <div class="container body-container">
-        <div class="title">
-            <h2>Mar Addai Sleeha Church, Paravattani</h2>
-            <h3>Election Result</h3>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="input-group mb-4">
-                    <input type="text" class="form-control total-count" placeholder="Total Polled Votes">
-                    <button class="total-count-btn btn btn-outline-danger">Done</button>
-                </div>
+    <div>
+        <div class="container body-container">
+            <div class="title">
+                <h2>Mar Addai Sleeha Church, Paravattani</h2>
+                <h3>Election Result</h3>
             </div>
-        </div>
-        <div class="first-section row">
-            <div class="group-results">
-                <div class="person2 col justify-content-center"></div>
-                <div class="d-grid gap-2 mx-auto btn-groups">
-                    <button class="btn btn-success btn-lg result">Result</button>
-                </div>
-                <div class="container results-container">
-                    <div class="results-group row">
-                        <div class="kaikar result-row col-12"></div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control total-count" placeholder="Total Polled Votes"
+                            aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <button class="total-count-btn btn btn-outline-danger" type="button"
+                            id="button-addon1">Done</button>
                     </div>
                 </div>
             </div>
-            <div class="group-results">
-                <div class="person col"></div>
-                <div class="d-grid gap-2 mx-auto btn-groups">
-                    <button class="btn btn-success btn-lg result1">Result</button>
+            <div class="first-section row">
+                <div class="group-results">
+                    <div class="person2 col justify-content-center"></div>
+                    <div class="d-grid gap-2 mx-auto btn-groups">
+                        <button class="btn btn-success btn-lg result" type="button">Result</button>
+                    </div>
+                    <div class="container results-container">
+                        <div class="results-group row">
+                            <div class="kaikar result-row col-12"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="container results-container">
-                    <div class="results-group row">
-                        <div class="parish-council result-row col-12"></div>
+                <div class="group-results">
+                    <div class="person col"></div>
+                    <div class="d-grid gap-2 mx-auto btn-groups">
+                        <button class="btn btn-success btn-lg result1" type="button">Result</button>
+                    </div>
+                    <div class="container results-container">
+                        <div class="results-group row">
+                            <div class="parish-council result-row col-12"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <button class="btn btn-outline-danger reset" type="button">Reset</button>
         </div>
-        <button class="btn btn-outline-danger reset">Reset</button>
     </div>
 
     <footer class="bg-light justify-content-end text-lg-start" style="opacity: .2; float: right;">
