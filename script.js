@@ -195,6 +195,35 @@ $(document).ready(function () {
         array = _.sortBy(array, 'count').reverse();
         displayResults(".kaikar", array);
     });
+    $('.result, .result1').click(function () {
+    if ($('.total-count').val() == "") {
+        alert("Enter Total Polled Votes");
+        return;
+    }
+
+    let message = "Election Results:\n";
+    let totalVotes = $('.total-count').val();
+
+    // Get results
+    let results = [];
+    $('.result-panel').each(function () {
+        let name = $(this).find('label').text();
+        let votes = $(this).find('progress').val();
+        let percentage = $(this).find('.person-count span').text();
+        results.push(`${name}: ${votes} votes (${percentage})`);
+    });
+
+    message += results.join("\n");
+    message += `\nTotal Votes: ${totalVotes}`;
+
+    // WhatsApp API link
+    let phoneNumber = "9746615731"; // Replace with the recipient's number
+    let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, '_blank');
+});
+
 });
 
 function displayResults(container, array) {
