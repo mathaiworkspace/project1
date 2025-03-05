@@ -21,116 +21,116 @@ function loadCandidates(dataKey, containerClass) {
     });
 }
 
- var data = {
-        "kaikar": [{
-            "name": "A.C. Chummar",
-            "index": "1",
-            "count": "0"
-        }, {
-            "name": "C.K. Johnson",
-            "index": "2",
-            "count": "0"
-        }, {
-            "name": "Paul Mathews",
-            "index": "3",
-            "count": "0"
-        }, {
-            "name": "Thimothy Mampily",
-            "index": "4",
-            "count": "0"
-        }, {
-            "name": "Tony Pananchery",
-            "index": "5",
-            "count": "0"
-        },
-        {
-            "name": "Invalid Votes",
-            "index": "6",
-            "count": "0"
-        }
-        ],
-        "Parish": [{
-            "name": "Abi Mathew",
-            "index": "1",
-            "count": "0"
-        }, {
-            "name": "Arooj Mohan",
-            "index": "2",
-            "count": "0"
-        }, {
-            "name": "A.R. Babu",
-            "index": "3",
-            "count": "0"
-        }, {
-            "name": "Biju Benjamin",
-            "index": "4",
-            "count": "0"
-        }, {
-            "name": "A.C. Chummar",
-            "index": "5",
-            "count": "0"
-        }, {
-            "name": "Davis Chandy",
-            "index": "6",
-            "count": "0"
-        }, {
-            "name": "C.V. Dinha",
-            "index": "7",
-            "count": "0"
-        }, {
-            "name": "Dolphy Paul",
-            "index": "8",
-            "count": "0"
-        }, {
-            "name": "O.T. Francis",
-            "index": "9",
-            "count": "0"
-        }, {
-            "name": "Gleeto Thimothy",
-            "index": "10",
-            "count": "0"
-        }, {
-            "name": "Jijo M.J.",
-            "index": "11",
-            "count": "0"
-        }, {
-            "name": "C.K. Johnson",
-            "index": "12",
-            "count": "0"
-        }, {
-            "name": "Laly Rapheal",
-            "index": "13",
-            "count": "0"
-        }, {
-            "name": "T.C. Paul",
-            "index": "14",
-            "count": "0"
-        }, {
-            "name": "E.P. Sabu",
-            "index": "15",
-            "count": "0"
-        }, {
-            "name": "Thimothy Mampily",
-            "index": "16",
-            "count": "0"
-        }, {
-            "name": "Tony Parakal",
-            "index": "17",
-            "count": "0"
-        }, {
-            "name": "N.R. Varghese",
-            "index": "18",
-            "count": "0"
-        }, {
-            "name": "O.L. Wilson",
-            "index": "19",
-            "count": "0"
-        }, {
-            "name": "Invalid Votes",
-            "index": "20",
-            "count": "0"
-        }]
+var data = {
+    "kaikar": [{
+        "name": "A.C. Chummar",
+        "index": "1",
+        "count": "0"
+    }, {
+        "name": "C.K. Johnson",
+        "index": "2",
+        "count": "0"
+    }, {
+        "name": "Paul Mathews",
+        "index": "3",
+        "count": "0"
+    }, {
+        "name": "Thimothy Mampily",
+        "index": "4",
+        "count": "0"
+    }, {
+        "name": "Tony Pananchery",
+        "index": "5",
+        "count": "0"
+    },
+    {
+        "name": "Invalid Votes",
+        "index": "6",
+        "count": "0"
     }
+    ],
+    "Parish": [{
+        "name": "Abi Mathew",
+        "index": "1",
+        "count": "0"
+    }, {
+        "name": "Arooj Mohan",
+        "index": "2",
+        "count": "0"
+    }, {
+        "name": "A.R. Babu",
+        "index": "3",
+        "count": "0"
+    }, {
+        "name": "Biju Benjamin",
+        "index": "4",
+        "count": "0"
+    }, {
+        "name": "A.C. Chummar",
+        "index": "5",
+        "count": "0"
+    }, {
+        "name": "Davis Chandy",
+        "index": "6",
+        "count": "0"
+    }, {
+        "name": "C.V. Dinha",
+        "index": "7",
+        "count": "0"
+    }, {
+        "name": "Dolphy Paul",
+        "index": "8",
+        "count": "0"
+    }, {
+        "name": "O.T. Francis",
+        "index": "9",
+        "count": "0"
+    }, {
+        "name": "Gleeto Thimothy",
+        "index": "10",
+        "count": "0"
+    }, {
+        "name": "Jijo M.J.",
+        "index": "11",
+        "count": "0"
+    }, {
+        "name": "C.K. Johnson",
+        "index": "12",
+        "count": "0"
+    }, {
+        "name": "Laly Rapheal",
+        "index": "13",
+        "count": "0"
+    }, {
+        "name": "T.C. Paul",
+        "index": "14",
+        "count": "0"
+    }, {
+        "name": "E.P. Sabu",
+        "index": "15",
+        "count": "0"
+    }, {
+        "name": "Thimothy Mampily",
+        "index": "16",
+        "count": "0"
+    }, {
+        "name": "Tony Parakal",
+        "index": "17",
+        "count": "0"
+    }, {
+        "name": "N.R. Varghese",
+        "index": "18",
+        "count": "0"
+    }, {
+        "name": "O.L. Wilson",
+        "index": "19",
+        "count": "0"
+    }, {
+        "name": "Invalid Votes",
+        "index": "20",
+        "count": "0"
+    }]
+}
 
 loadCandidates("Parish", ".person");
 loadCandidates("kaikar", ".person2");
@@ -195,34 +195,31 @@ $(document).ready(function () {
         array = _.sortBy(array, 'count').reverse();
         displayResults(".kaikar", array);
     });
-    $('.result, .result1').click(function () {
-    if ($('.total-count').val() == "") {
-        alert("Enter Total Polled Votes");
-        return;
-    }
+    $('.whatsapp-send').click(function () {
+        if ($('.total-count').val() == "") {
+            alert("Enter Total Polled Votes");
+            return;
+        }
 
-    let message = "Election Results:\n";
-    let totalVotes = $('.total-count').val();
+        let message = "Election Results:\n";
+        let totalVotes = $('.total-count').val();
+        let results = [];
 
-    // Get results
-    let results = [];
-    $('.result-panel').each(function () {
-        let name = $(this).find('label').text();
-        let votes = $(this).find('progress').val();
-        let percentage = $(this).find('.person-count span').text();
-        results.push(`${name}: ${votes} votes (${percentage})`);
+        $('.result-panel').each(function () {
+            let name = $(this).find('label').text();
+            let votes = $(this).find('progress').val();
+            let percentage = $(this).find('.person-count span').text();
+            results.push(`${name}: ${votes} votes (${percentage})`);
+        });
+
+        message += results.join("\n");
+        message += `\nTotal Votes: ${totalVotes}`;
+
+        let phoneNumber = "1234567890"; // Replace with recipient/group number
+        let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappURL, '_blank');
     });
-
-    message += results.join("\n");
-    message += `\nTotal Votes: ${totalVotes}`;
-
-    // WhatsApp API link
-    let phoneNumber = "9746615731"; // Replace with the recipient's number
-    let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-    // Open WhatsApp
-    window.open(whatsappURL, '_blank');
-});
 
 });
 
