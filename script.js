@@ -23,15 +23,15 @@ function loadCandidates(dataKey, containerClass) {
 
 var data = {
     "kaikar": [{
-        "name": "",
+        "name": "Anto D Ollukaran",
         "index": "1",
         "count": "0"
     }, {
-        "name": "A.C. Chummar",
+        "name": "A.C Chummar",
         "index": "2",
         "count": "0"
     }, {
-        "name": "",
+        "name": "CK Johnson",
         "index": "3",
         "count": "0"
     }, {
@@ -39,12 +39,12 @@ var data = {
         "index": "4",
         "count": "0"
     }, {
-        "name": "Thimothy Mampily",
+        "name": "Thimothy Mampliy",
         "index": "5",
         "count": "0"
     },
     {
-        "name": "Wilson OL",
+        "name": "O.L. Wilson",
         "index": "6",
         "count": "0"
     },
@@ -59,11 +59,11 @@ var data = {
         "index": "1",
         "count": "0"
     }, {
-        "name": "Abi Ponmaniserry",
+        "name": "Abi Ponmanissery",
         "index": "2",
         "count": "0"
     }, {
-        "name": "",
+        "name": "Abi Erinjery",
         "index": "3",
         "count": "0"
     }, {
@@ -75,7 +75,7 @@ var data = {
         "index": "5",
         "count": "0"
     }, {
-        "name": "",
+        "name": "Anto D Ollukaran",
         "index": "6",
         "count": "0"
     }, {
@@ -83,7 +83,7 @@ var data = {
         "index": "7",
         "count": "0"
     }, {
-        "name": "",
+        "name": "AR Babu",
         "index": "8",
         "count": "0"
     }, {
@@ -99,11 +99,11 @@ var data = {
         "index": "11",
         "count": "0"
     }, {
-        "name": "Jijo M.J.",
+        "name": "Jijo Johnny",
         "index": "12",
         "count": "0"
     }, {
-        "name": "",
+        "name": "CK Johnson",
         "index": "13",
         "count": "0"
     }, {
@@ -111,11 +111,11 @@ var data = {
         "index": "14",
         "count": "0"
     }, {
-        "name": "",
+        "name": "Caby Issac",
         "index": "15",
         "count": "0"
     }, {
-        "name": "",
+        "name": "Laz James",
         "index": "16",
         "count": "0"
     }, {
@@ -127,7 +127,7 @@ var data = {
         "index": "18",
         "count": "0"
     }, {
-        "name": "Shincy Niyo",
+        "name": "Sincy Neo",
         "index": "19",
         "count": "0"
     }, {
@@ -147,8 +147,12 @@ var data = {
         "index": "23",
         "count": "0"
     }, {
-        "name": "Wilson O.L.",
+        "name": "OL Wilson",
         "index": "24",
+        "count": "0"
+    }, {
+        "name": "Invalid Votes",
+        "index": "25",
         "count": "0"
     }]
 }
